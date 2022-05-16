@@ -12,13 +12,7 @@ var groupAnagrams = function(strs) {
         
     
     console.log(indeces)
-    const outputArr=[]
-    indeces.forEach((value,key
-                    )=>{
-        const indecesArray=[]
-        value.forEach(value=>indecesArray.push(strs[value]))
-        outputArr.push(indecesArray)    
-        
-    })
-    return outputArr
-};
+    const values =[...indeces.values()]
+    return values.map(value=>value.map(value=>strs[value]))
+    
+    };
