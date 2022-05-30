@@ -7,7 +7,9 @@ var longestCommonPrefix = function(strs) {
     for(let i=0;i<strs.length;i++){
             for(let j=0;j<common.length;j++)
                 if([...common][j]!==[...strs[i]][j])
-                      common=common.slice(0,j)
+                {common=common.slice(0,j)
+                    break;
+                }
         
     }
     return common
