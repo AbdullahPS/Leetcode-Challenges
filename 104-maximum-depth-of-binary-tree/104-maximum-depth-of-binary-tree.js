@@ -10,15 +10,7 @@
  * @param {TreeNode} root
  * @return {number}
  */
-var maxDepth = function(root) {
-let maxDepth=0;
-const getDepth=(node,depth)=>{
-if(!node)return;
-if(depth>maxDepth) maxDepth=depth
-getDepth(node.right,depth+1)
-getDepth(node.left,depth+1)
-    
-}
-getDepth(root,1)
-return maxDepth;
+const maxDepth = function(root) {
+if(!root)return 0;
+return 1+Math.max(maxDepth(root.right),maxDepth(root.left)) 
 };
