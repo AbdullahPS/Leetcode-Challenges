@@ -16,7 +16,6 @@ for(let currS of s){
         stack.splice(index-1,index+1)
     }
 }
-    console.log(stack)
      return stack.length===0
 
  
